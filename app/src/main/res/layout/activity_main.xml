@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/helloUser"
         android:layout_width="204dp"
         android:layout_height="50dp"
         android:text="HELLO USER!"

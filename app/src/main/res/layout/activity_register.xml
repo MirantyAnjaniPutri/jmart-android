@@ -49,15 +49,14 @@
         app:layout_constraintWidth_percent=".8" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:background="#656161"
         android:text="REGISTER"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:iconTint="#6E6666"
+        app:backgroundTint="#cccccc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
