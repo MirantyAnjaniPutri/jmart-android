@@ -1,10 +1,8 @@
 package mirantyJmartAK.jmart_android.request;
 
 import com.android.volley.Response;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-
 import com.android.volley.toolbox.StringRequest;
 
 

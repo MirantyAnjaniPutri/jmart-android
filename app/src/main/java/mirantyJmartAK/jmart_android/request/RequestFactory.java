@@ -22,6 +22,7 @@ public class RequestFactory {
         String url = String.format(URL_FORMAT_ID, parentURI, id);
         return new StringRequest(Request.Method.GET, url, listener, errorListener);
     }
+
     public static StringRequest getPage
             (
                     String parentURI,
