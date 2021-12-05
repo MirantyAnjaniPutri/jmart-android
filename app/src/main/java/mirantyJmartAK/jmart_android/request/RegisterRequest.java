@@ -10,7 +10,9 @@ public class RegisterRequest extends StringRequest {
     private static final String URL = "http://10.0.2.2:8080/account/register";
     private final HashMap<String, String> params;
 
-    public RegisterRequest(String name, String email, String password, Response.Listener<String> listener, Response.ErrorListener errorListener) {
+    public RegisterRequest(String name, String email, String password,
+                           Response.Listener<String> listener,
+                           Response.ErrorListener errorListener) {
         super(Method.POST, URL, listener, errorListener);
         params = new HashMap<>();
         params.put("name", name);

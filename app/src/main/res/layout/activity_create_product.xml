@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateProductActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/createAProduct"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/createProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:ems="23"
+                android:hint="Name"
+                android:inputType="text"
+                android:textSize="13dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="60dp"
+                tools:ignore="MissingConstraints">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/createProductWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:ems="23"
+                android:hint="Weight"
+                android:inputType="text"
+                android:textSize="13dp"
+                tools:ignore="MissingConstraints">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/createProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="180dp"
+                android:ems="23"
+                android:hint="Price"
+                android:inputType="text"
+                android:textSize="13dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/createProductDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="240dp"
+                android:ems="23"
+                android:hint="Discount"
+                android:inputType="text"
+                android:textSize="13dp"
+                tools:ignore="MissingConstraints">
+            </EditText>
+
+            <TextView
+                android:id="@+id/createProductTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Create Product"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/createProductCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="312dp"
+                android:text="Condition"
+                android:textSize="13dp"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/createProductCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="365dp"
+                android:text="Category"
+                android:textSize="13dp"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/createProductCategorySpinner"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="350dp"
+                android:entries="@array/productCategory">
+
+            </Spinner>
+
+            <TextView
+                android:id="@+id/createProductShipmentPlans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="415dp"
+                android:text="Shipment Plan"
+                android:textSize="13dp"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/createProductShipmentSpinner"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="400dp"
+                android:entries="@array/shipmentPlans">
+
+            </Spinner>
+
+            <CheckBox
+                android:id="@+id/createProductNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="300dp"
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_selector"
+                android:text="New">
+
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/createProductUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="300dp"
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_selector"
+                android:text="Used">
+
+            </CheckBox>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="520dp">
+
+        <Button
+            android:id="@+id/buttonCreateProduct"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:text="CREATE"
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="520dp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/buttonCancelCreateProduct"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:text="CANCEL"
+            app:layout_constraintStart_toEndOf="@+id/buttonCreateProduct"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp">
+
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

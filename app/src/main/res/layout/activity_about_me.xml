@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutMeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewAccountDetails"
+        android:visibility="visible"
+        android:layout_width="380dp"
+        android:layout_height="580dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="11dp">
+
+        <Button
+            android:id="@+id/buttonRegisterStore"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="210dp"
+            android:text="REGISTER STORE"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/buttonTopUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="155dp"
+            android:text="TOP UP" />
+
+        <EditText
+            android:id="@+id/topUpAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="155dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Top Up Amount" />
+
+        <TextView
+            android:id="@+id/aboutMeUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:text="name"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/aboutMeUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="90dp"
+            android:ems="10"
+            android:text="email"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/aboutMeUserBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:text="ceritanya angka"
+            android:textAlignment="textEnd"
+            android:textColor="#6BD154" />
+
+        <TextView
+            android:id="@+id/accountDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Account Details"
+            android:textSize="16dp"
+            tools:ignore="MissingConstraints">
+        </TextView>
+
+        <TextView
+            android:id="@+id/aboutMeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:text="Name"
+            android:textSize="14dp"
+            tools:ignore="MissingConstraints">
+        </TextView>
+
+        <TextView
+            android:id="@+id/aboutMeEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="90dp"
+            android:text="Email"
+            android:textSize="14dp"
+            tools:ignore="MissingConstraints">
+        </TextView>
+
+        <TextView
+            android:id="@+id/aboutMeBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="120dp"
+            android:text="Balance"
+            android:textSize="14dp"
+            tools:ignore="MissingConstraints">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/RegisterAStore"
+        android:visibility="gone"
+        android:layout_width="340dp"
+        android:layout_height="300dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="275dp">
+        <Button
+            android:id="@+id/registerStoreButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="230dp"
+            android:text="REGISTER" />
+
+        <Button
+            android:id="@+id/cancelRegisterStore"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="230dp"
+            android:text="CANCEL" />
+
+        <EditText
+            android:id="@+id/RegisterStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:ems="22"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/RegisterStoreAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:ems="22"
+            android:inputType="text"
+            android:text="Address"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/RegisterStorePhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="160dp"
+            android:ems="22"
+            android:inputType="text"
+            android:text="Phone Number"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/RegisterStoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Register Store"
+            android:textSize="16dp"
+            tools:ignore="MissingConstraints">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ViewRegisteredStore"
+        android:visibility="gone"
+        android:layout_width="340dp"
+        android:layout_height="300dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="10dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="275dp">
+
+        <TextView
+            android:id="@+id/RegisteredStoreTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Store"
+            android:textSize="16dp"
+            tools:ignore="MissingConstraints">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/RegisteredStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:text="Name"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/RegisteredStoreAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="90dp"
+            android:text="Address"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/RegisteredStorePhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="120dp"
+            android:text="Phone Number"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:text="name"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/storeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="90dp"
+            android:ems="10"
+            android:text="address"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/storePhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:text="phone number"
+            android:textAlignment="textEnd" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
