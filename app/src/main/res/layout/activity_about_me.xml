@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AboutMeActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewAccountDetails"
-        android:visibility="visible"
-        android:layout_width="380dp"
-        android:layout_height="580dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:foregroundGravity="center"
         app:cardCornerRadius="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="11dp">
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/buttonRegisterStore"
             android:layout_width="330dp"
             android:layout_height="50dp"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="210dp"
-            android:text="REGISTER STORE"
-            android:visibility="gone"/>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="170dp"
+            android:backgroundTint="#896A67"
+            android:text="REGISTER STORE" />
 
         <Button
             android:id="@+id/buttonTopUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="255dp"
-            android:layout_marginTop="155dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#896A67"
             android:text="TOP UP" />
 
         <EditText
             android:id="@+id/topUpAmount"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="155dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="120dp"
             android:ems="10"
-            android:inputType="number"
-            android:hint="Top Up Amount" />
+            android:hint="Top Up Amount"
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/aboutMeUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="60dp"
-            android:ems="10"
+            android:layout_marginTop="50dp"
+            android:ems="13"
             android:text="name"
             android:textAlignment="textEnd" />
 
@@ -59,8 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="90dp"
-            android:ems="10"
+            android:layout_marginTop="70dp"
+            android:ems="13"
             android:text="email"
             android:textAlignment="textEnd" />
 
@@ -69,8 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="120dp"
-            android:ems="10"
+            android:layout_marginTop="90dp"
+            android:ems="13"
             android:text="ceritanya angka"
             android:textAlignment="textEnd"
             android:textColor="#6BD154" />
@@ -84,6 +83,7 @@
             android:text="Account Details"
             android:textSize="16dp"
             tools:ignore="MissingConstraints">
+
         </TextView>
 
         <TextView
@@ -91,10 +91,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:text="Name"
             android:textSize="14dp"
             tools:ignore="MissingConstraints">
+
         </TextView>
 
         <TextView
@@ -102,10 +103,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="70dp"
             android:text="Email"
             android:textSize="14dp"
             tools:ignore="MissingConstraints">
+
         </TextView>
 
         <TextView
@@ -113,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="90dp"
             android:text="Balance"
             android:textSize="14dp"
             tools:ignore="MissingConstraints">
@@ -124,61 +126,63 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/RegisterAStore"
-        android:visibility="gone"
-        android:layout_width="340dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:foregroundGravity="center"
         app:cardCornerRadius="10dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="35dp"
         tools:layout_editor_absoluteY="275dp">
+
         <Button
             android:id="@+id/registerStoreButton"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="230dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="200dp"
+            android:backgroundTint="#896A67"
             android:text="REGISTER" />
 
         <Button
             android:id="@+id/cancelRegisterStore"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:layout_marginStart="180dp"
-            android:layout_marginTop="230dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="200dp"
+            android:backgroundTint="#896A67"
             android:text="CANCEL" />
 
         <EditText
             android:id="@+id/RegisterStoreName"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:ems="22"
+            android:ems="25"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:hint="Name"
             android:textSize="12dp" />
 
         <EditText
             android:id="@+id/RegisterStoreAddress"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="100dp"
-            android:ems="22"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="90dp"
+            android:ems="25"
             android:inputType="text"
-            android:text="Address"
+            android:hint="Address"
             android:textSize="12dp" />
 
         <EditText
             android:id="@+id/RegisterStorePhoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="160dp"
-            android:ems="22"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="140dp"
+            android:ems="25"
             android:inputType="text"
-            android:text="Phone Number"
+            android:hint="Phone Number"
             android:textSize="12dp" />
 
         <TextView
@@ -197,9 +201,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/ViewRegisteredStore"
-        android:visibility="gone"
-        android:layout_width="340dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:foregroundGravity="center"
         app:cardCornerRadius="10dp"
         tools:ignore="MissingConstraints"
@@ -232,7 +235,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="80dp"
             android:text="Address"
             android:textSize="12dp" />
 
@@ -241,7 +244,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="100dp"
             android:text="Phone Number"
             android:textSize="12dp" />
 
@@ -251,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
             android:layout_marginTop="60dp"
-            android:ems="10"
+            android:ems="13"
             android:text="name"
             android:textAlignment="textEnd" />
 
@@ -260,8 +263,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="90dp"
-            android:ems="10"
+            android:layout_marginTop="80dp"
+            android:ems="13"
             android:text="address"
             android:textAlignment="textEnd" />
 
@@ -270,8 +273,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="120dp"
-            android:ems="10"
+            android:layout_marginTop="100dp"
+            android:ems="13"
             android:text="phone number"
             android:textAlignment="textEnd" />
 
@@ -279,4 +282,4 @@
     </androidx.cardview.widget.CardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

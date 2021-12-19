@@ -22,12 +22,19 @@ import org.w3c.dom.Text;
 
 import mirantyJmartAK.jmart_android.model.Account;
 import mirantyJmartAK.jmart_android.model.Store;
+import mirantyJmartAK.jmart_android.request.LoginRequest;
 import mirantyJmartAK.jmart_android.request.RegisterRequest;
 import mirantyJmartAK.jmart_android.request.StoreRequest;
+import mirantyJmartAK.jmart_android.request.TopUpRequest;
 
+/**
+ * The app page that will display about the user's account details.
+ *
+ * @author Miranty Anjani Putri
+ */
 public class AboutMeActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
-    private static Store loggedStore = LoginActivity.getLoggedAccount().store;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,60 +66,86 @@ public class AboutMeActivity extends AppCompatActivity {
         Button cancelStoreReg = findViewById(R.id.cancelRegisterStore);
 
         //Registered Store CardView
-        TextView registeredStoreName = findViewById(R.id.RegisteredStoreName);
-        TextView registeredStoreAddress = findViewById(R.id.RegisteredStoreAddress);
-        TextView registeredStorePhoneNumber = findViewById(R.id.RegisteredStorePhoneNumber);
+        TextView registeredStoreName = findViewById(R.id.storeName);
+        TextView registeredStoreAddress = findViewById(R.id.storeAddress);
+        TextView registeredStorePhoneNumber = findViewById(R.id.storePhoneNumber);
 
-        if (loggedUser.store != null) {
-            storeTerdaftar.setVisibility(View.VISIBLE);
-            registeredStoreName.setText(loggedUser.store.name);
-            registeredStoreAddress.setText(loggedUser.store.address);
-            registeredStorePhoneNumber.setText(loggedUser.store.phoneNumber);
+        registerStoreGede.setVisibility(View.GONE);
+        registerAStore.setVisibility(View.GONE);
+        storeTerdaftar.setVisibility(View.GONE);
+
+        if (LoginActivity.getLoggedAccount().store == null) {
+            registerStoreGede.setVisibility(View.VISIBLE);
         }
         else {
-            registerStoreGede.setVisibility(View.VISIBLE);
-            registerStoreGede.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    registerStoreGede.setVisibility(View.GONE);
-                    registerAStore.setVisibility(View.VISIBLE);
-
-                    registerStoreButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String storeNama = storeName.getText().toString();
-                            String storeAdd = storeAddress.getText().toString();
-                            String storePhone = storePhoneNumber.getText().toString();
-
-                            Response.Listener<String> listener = new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    try{
-                                        JSONObject object = new JSONObject(response);
-                                        if (object != null)
-                                        {
-                                            Toast.makeText(AboutMeActivity.this, "Register Store Success.", Toast.LENGTH_SHORT).show();
-                                            loggedStore = gson.fromJson(object.toString(), Store.class);
-                                            registerAStore.setVisibility(View.GONE);
-                                            storeTerdaftar.setVisibility(View.VISIBLE);
-                                        }
-                                    }
-                                    catch (JSONException e)
-                                    {
-                                        e.printStackTrace();
-                                        Toast.makeText(AboutMeActivity.this, "Registration Failed.",Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            };
-                            StoreRequest storeRequest = new StoreRequest(storeName.getText().toString(), storeAddress.getText().toString(), storePhoneNumber.getText().toString(), listener, null);
-                            RequestQueue requestQueue = Volley.newRequestQueue(AboutMeActivity.this);
-                            requestQueue.add(storeRequest);
-                        }
-                    });
-
-                }
-            });
+            registeredStoreName.setText("" + LoginActivity.getLoggedAccount().store.name);
+            registeredStoreAddress.setText("" + LoginActivity.getLoggedAccount().store.address);
+            registeredStorePhoneNumber.setText("" + LoginActivity.getLoggedAccount().store.phoneNumber);
+            storeTerdaftar.setVisibility(View.VISIBLE);
         }
+
+        registerStoreGede.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerStoreGede.setVisibility(View.GONE);
+                registerAStore.setVisibility(View.VISIBLE);
+                cancelStoreReg.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        registerAStore.setVisibility(View.GONE);
+                        registerStoreGede.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+        });
+
+        registerStoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Response.Listener<String> listener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject object = new JSONObject(response);
+                            LoginActivity.getLoggedAccount().store = gson.fromJson(object.toString(), Store.class);
+                            System.out.println(LoginActivity.getLoggedAccount().store);
+                            Toast.makeText(AboutMeActivity.this, "Store Created!", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(getIntent());
+                        } catch (JSONException e) {
+                            Toast.makeText(AboutMeActivity.this, "Create Store Failed!", Toast.LENGTH_SHORT).show();
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                StoreRequest request = new StoreRequest(LoginActivity.getLoggedAccount().id, storeName.getText().toString(), storeAddress.getText().toString(), storePhoneNumber.getText().toString(), listener, null);
+                RequestQueue requestQueue = Volley.newRequestQueue(AboutMeActivity.this);
+                requestQueue.add(request);
+            }
+        });
+
+        topUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Response.Listener<String> listener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if(Boolean.parseBoolean(response)) {
+                            Toast.makeText(AboutMeActivity.this, "Top Up Berhasil!", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(AboutMeActivity.this, "Top Up Gagal!", Toast.LENGTH_SHORT).show();
+                        }
+                        LoginActivity.getLoggedAccount().balance += Double.parseDouble(TopUp.getText().toString());
+                        finish();
+                        startActivity(getIntent());
+                    }
+                };
+                TopUpRequest topUpRequest = new TopUpRequest(LoginActivity.getLoggedAccount().id, Double.parseDouble(TopUp.getText().toString()), listener, null);
+                RequestQueue requestQueue = Volley.newRequestQueue(AboutMeActivity.this);
+                requestQueue.add(topUpRequest);
+            }
+        });
 
     }
 }

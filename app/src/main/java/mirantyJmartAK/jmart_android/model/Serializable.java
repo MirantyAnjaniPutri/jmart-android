@@ -1,5 +1,9 @@
 package mirantyJmartAK.jmart_android.model;
 
+/**
+ * Automatically assign id to an object with auto incrementing value.
+ */
+
 public class Serializable {
-    public final int id = -1;
+    public int id;
 }

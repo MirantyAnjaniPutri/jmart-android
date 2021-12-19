@@ -1,13 +1,13 @@
 package mirantyJmartAK.jmart_android.model;
 
+/**
+ * This is class for representing a store.
+ *
+ * @author Miranty Anjani Putri
+ */
+
 public class Store extends Serializable {
     public String address;
     public String name;
     public String phoneNumber;
-
-    public Store (String name, String address, String phoneNumber) {
-        this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-    }
 }

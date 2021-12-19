@@ -11,84 +11,80 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewProductAtas"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_gravity="fill"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProductAtas"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_row="0"
-                android:layout_column="0">
+                android:layout_height="70dp"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp"
+                app:cardElevation="8dp">
 
-                <EditText
-                    android:id="@+id/searchPage"
-                    android:layout_width="80dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:hint="search"
-                    app:layout_constraintEnd_toStartOf="@+id/buttonGo"
-                    app:layout_constraintStart_toEndOf="@+id/buttonNext"
-                    tools:ignore="MissingConstraints" />
-
-                <Button
-                    android:id="@+id/buttonPrevious"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
                     android:layout_row="0"
-                    android:layout_column="0"
-                    android:layout_marginStart="10dp"
-                    android:text="PREV"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_column="0">
 
-                <Button
-                    android:id="@+id/buttonNext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:layout_marginStart="110dp"
-                    android:text="NEXT"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <EditText
+                        android:id="@+id/searchPage"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_column="0"
+                        android:ems="10"
+                        android:hint="search"
+                        android:inputType="number"
+                        app:layout_constraintEnd_toStartOf="@+id/buttonGo"
+                        app:layout_constraintStart_toEndOf="@+id/buttonNext"
+                        tools:ignore="MissingConstraints" />
 
-                <Button
-                    android:id="@+id/buttonGo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:layout_marginStart="300dp"
-                    android:text="GO"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/buttonPrevious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_marginStart="10dp"
+                        android:text="PREV"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewProductListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            app:cardElevation="8dp">
+                    <Button
+                        android:id="@+id/buttonNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_marginStart="110dp"
+                        android:text="NEXT"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/buttonGo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_marginStart="300dp"
+                        android:text="GO"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <ListView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
                 android:id="@+id/listViewProduct"
-                android:entries="@array/productCategory">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
             </ListView>
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
     </GridLayout>
 </FrameLayout>

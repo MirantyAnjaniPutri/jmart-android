@@ -18,6 +18,14 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * This is for the Register Activity, creating a new account.
+ * User will input the necessary registration info,
+ * before they can access login and access the app.
+ *
+ * @author Miranty Anjani Putri
+ */
+
 public class RegisterActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
 

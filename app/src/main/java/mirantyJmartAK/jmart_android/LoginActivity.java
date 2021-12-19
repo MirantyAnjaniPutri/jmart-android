@@ -22,6 +22,14 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * This is for the Login Activity,
+ * user will input the necessary login info,
+ * before they can access the app.
+ *
+ * @author Miranty Anjani Putri
+ */
+
 public class LoginActivity extends AppCompatActivity {
     private static final Gson gson = new Gson();
     private static Account loggedAccount = null;

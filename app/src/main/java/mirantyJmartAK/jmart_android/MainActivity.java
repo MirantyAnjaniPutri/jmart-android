@@ -15,6 +15,13 @@ import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * Main Activity is the main menu aka the page
+ * where user will be directed once they've successfully
+ * logged in.
+ *
+ * @author Miranty Anjani Putri
+ */
 public class MainActivity extends AppCompatActivity {
     Menu myMenu;
     //top menu
@@ -58,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         ViewPager2 viewPager2 = findViewById(R.id.view_pager2);
-        //Spinner spinner = findViewById(R.id.spinner);
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentAdapter adapter = new FragmentAdapter(fm, getLifecycle());

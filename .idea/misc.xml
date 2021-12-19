@@ -11,14 +11,16 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/drawable/ic_baseline_radio_button_unchecked_24.xml" value="0.21384615384615385" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1453125" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_about_me.xml" value="0.37092731829573933" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_about_me.xml" value="0.6" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_create_product.xml" value="0.2656641604010025" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_payment.xml" value="0.24242424242424243" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_product_detail.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/activity_register.xml" value="0.22" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/fragment_first.xml" value="0.264" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/fragment_second.xml" value="0.4" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/layout/fragment_second.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/jmartandroid/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

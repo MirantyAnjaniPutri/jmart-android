@@ -12,6 +12,8 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  * Use the {@link SecondFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * This fragment is for the Filter display.
  */
 public class SecondFragment extends Fragment {
 
@@ -59,6 +61,7 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View productView = inflater.inflate(R.layout.fragment_second, container, false);
+        return productView;
     }
 }
